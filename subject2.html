@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min1.css">
+    <link rel="stylesheet" href="css/bootstrap.min1.css">
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+
+<body>
+
+
+    
+
+    <div class="container my-5">
+         <div class="form-inputs">
+             <h1 class="text-center py-5 title">Subjects List</h1>
+             <div class="form-group">
+                   <label class="title">Subject Name:</label>
+                   <input id="name" class="form-control">
+                   <div id="nameAlert" class="alert alert-danger mt-3 d-none">name is invalid</div>
+             </div>
+             <div class="form-group">
+                <label class="title">Department:</label>
+                <input  id="department" class="form-control">
+             </div>
+             <div class="form-group">
+                <label class="title">Level:</label>
+                <input  id="level" class="form-control">
+             </div>
+             <div class="form-group">
+                <label class="title">Teacher:</label>
+                <input   id="teacher" class="form-control">
+             </div>
+             <button  id="addBtn" class="btn btn-primary float-right">Add Subject</button>
+             <div class="clearfix"></div>
+         </div>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+        
+         <input  id="searchInput" placeholder="search by name" class="form-control my-3">
+            <table class="table my-2">
+              <thead>
+                  <th class="title">ID</th>
+                  <th class="title">Subject Name</th>
+                  <th class="title">Level</th>
+                  <th class="title">Department</th>
+                  <th class="title">Teacher</th>
+                  <th></th>
+                  <th></th>
+              </thead>
+              <tbody id="tableBody">
+
+              </tbody>
+         </table>
+    </div>
+
+  
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min1.js"></script>
+    <script src="js/subject4.js"></script>
+</body>
+
+</html>

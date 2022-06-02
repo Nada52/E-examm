@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min1.css">
+    <link rel="stylesheet" href="css/bootstrap.min1.css">
+    <link rel="stylesheet" href="css/style5.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="form-inputs">
+            <h1 class="text-center py-5 title">Professor List</h1>
+            <div class="form-group">
+                  <label class="title">First Name:</label>
+                  <input id="firstName" class="form-control" type="text">
+                  <div id="nameAlert" class="alert alert-danger mt-3 d-none">name is invalid</div>
+            </div>
+            <div class="form-group">
+               <label class="title">Last Name:</label>
+               <input  id="lastName" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+               <label class="title">Email:</label>
+               <input  id="email" class="form-control" type="email">
+            </div>
+            <div class="form-group">
+                <label class="title">Password:</label>
+                <input  id="password" class="form-control" type="password">
+            </div>
+            <button  id="addBtn" class="btn btn-primary float-right">Add Professor</button>
+            <div class="clearfix"></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       
+        <input  id="searchInput" placeholder="search by email" class="form-control my-3">
+           <table class="table my-2">
+             <thead>
+                 <th class="title">ID</th>
+                 <th class="title">Professor Name</th>
+                 <th class="title">Email</th>
+
+                 <th></th>
+                 <!-- <th></th> -->
+             </thead>
+             <tbody id="tableBody">
+
+             </tbody>
+        </table>
+   </div>
+
+ 
+   <script src="js/jquery-3.5.1.slim.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min1.js"></script>
+   <script src="js/professor.js"></script>
+</body>
+</html>

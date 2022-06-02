@@ -1,0 +1,52 @@
+*{
+  box-sizing: border-box;
+}
+nav.navbar navbar-expand-lg navbar-dark bg-dark{
+  background-color: #2980B9;
+}
+
+.styleAboutUsSections{
+  background-color: #444;
+  padding:20px;
+  margin: 20px;
+  color: white;
+  border-radius: 20px;
+}
+
+.subject {
+  background-color:#1A5276;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  justify-content: center; 
+  border: 5px solid white;  
+}
+
+.subject:hover{
+  background-color:  #2980B9;
+  color:white;
+}
+
+.subject a{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.subject a:hover{
+  color:white;
+}
+
+
+.subjectsContainer{
+  /* margin: 20px auto; */
+  /* width: 200px;
+  height: 100px; */
+  /* background-color: blue; */
+  display: grid;
+
+  grid-template-columns: repeat(4,25%);
+  /* grid-template-rows: repeat(4,25%) ; */
+  
+  /* gap: 10px 10px; */
+  text-align: center;
+}

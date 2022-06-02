@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <!-- link font awesome -->
+  <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+  <!-- beginning of navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">FCI Exams</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" id="getSubjects" onclick="clickableOnce() ">Subjects</a>
+           
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" href="#aboutUs">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" href="#contactUs">Contact</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+  
+<div id="test">
+    
+</div>
+  
+
+<script src="./assets/bootstrap.bundle.min.js"></script>
+<!-- <script>
+  function showSubjects() {
+    var x = document.getElementById("subjects");
+  
+    if (x.style.display !== "none") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "inline-flex";
+    }
+  }
+  </script>
+  <script>
+    document.querySelector('#getSubjects').addEventListener('click', function(event) {
+      event.preventDefault();
+    }); 
+
+  </script> -->
+  <script>
+    //(A) FLAG FOR "ALREADY CLICKED".
+    var clicked = false;
+     
+    // (B) FUNCTION - WILL ONLY RUN IF NOT CLICKED
+     function clickableOnce() { if (!clicked) {
+      // (B1) SET CLICKED TO TRUE
+      clicked = true;
+     
+      // (B2) DO YOUR PROCESSING HERE
+     getCourses();
+     
+      // (B3) RE-ENABLE AFTER PROCESSING IF YOU WANT
+      // clicked = false;
+    }}
+    </script>
+    <script>
+      function showSubjects() {
+        var x = document.getElementById("subjects");
+      
+        if (x.style.display !== "none") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "inline-flex";
+        }
+      }
+      </script>
+      <script>
+        document.querySelector('#getSubjects').addEventListener('click', function(event) {
+          event.preventDefault();
+        }); 
+    
+      </script>
+  <script src="subject.js"></script>
+</body>
+
+</html>

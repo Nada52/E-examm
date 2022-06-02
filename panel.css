@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+ 
+.side-menu li a:visited{
+    color: aliceblue;
+}
+.side-menu li a:hover{
+    color: blue;
+}
+button a:visited , button a:hover{
+    color: aliceblue;
+}
+li{
+    list-style: none;
+}
+h1{
+    color: blue;
+}
+.side-menu{
+    position: fixed;
+    background-color: #2980B9;
+    width: 20vw;
+    display: flex;
+    min-height: 100vh;
+    
+    flex-direction: column;
+}
+.side-menu .panel-name{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px 0px rgba( 0, 0,0,1 );
+
+}
+ 
+.side-menu li{
+    align-items: center;
+    padding: 10px 40px;
+    display: flex;
+    font-size: 24px;
+    color: aliceblue;
+    margin-bottom: 25px;
+}
+.side-menu li:hover{
+    color: blue;
+}
+img{
+    width: 25px;
+}
+
+.container{
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 80vw;
+    background-color: aliceblue;
+}
+.container .header{
+background-color: #2980B9;
+position: fixed;
+right: 0;
+top: 0;
+height: 10vh;
+width: 80vw;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0px 4px 8px 0px rgba( 0, 0,0,0.2 );
+z-index: 1;
+}
+.container .header .nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav .logo{
+    text-transform: uppercase;
+    color:aliceblue;
+    letter-spacing: 5px;
+    font-size: 21px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.container .header .nav .nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+   
+}
+ 
+.container .header .nav .nav-links li a{
+    text-decoration: none;
+list-style: none;
+letter-spacing: 3px;
+font-weight: bold;
+color: aliceblue;
+font-size: 20px;
+margin-left: 20px;
+ 
+}
+.container .header .nav .nav-links li a:hover{
+    color:  blue;
+}
+.admin{
+    width: 50%;
+    margin-top: 5px;
+    margin-left: 60px;
+  border-radius: 50%;  
+}
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+    background-color: aliceblue;
+}
+.container .content .cards{
+    padding: 20px 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+.container .content .cards .card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 4px 8px 0px rgba( 0, 0,0,1 );
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.container .content .cards .card .box{
+     /* background-color: blue;  */
+    width: 150vh;
+    min-height: 80vh;
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+     
+}
+.container .content .cards .card .box button{
+    justify-content: space-between;
+     
+    padding: 30px;
+    width: 200px;
+    color: azure;
+    border-radius: 10px;
+    border: blue;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    background-color: #2980B9;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 20px;
+    
+
+
+}
+.container .content .cards .card .box button:hover{
+    color: azure;
+    background-color: blue;
+}
+@media screen  and (max-width:1050px){
+    .side-menu li{
+        font-size: 18px;
+    }
+}
+@media screen  and (max-width:940px){
+    .side-menu li span{
+         display: none;
+    }
+    .side-menu  {
+        align-items: center;
+    }
+    .side-menu li img{
+        width: 40px;
+        height: 40px;
+    }
+    .panel-name h1{
+        font-size: 12px;
+        }
+}
+
+
+@media screen  and (max-width:536px){
+.panel-name h1{
+font-size: 12px;
+}
+.container .content .cards{
+    justify-content: center;
+}
+.side-menu li img{
+    width: 30px;
+    height: 30px;
+}
+ 
+ 
+}
+@media screen  and (max-width:600px){
+    .panel-name h1{
+        font-size: 12px;
+        }
+        .container .content .cards{
+            justify-content: center;
+        }
+        .side-menu li img{
+            width: 30px;
+            height: 30px;
+        }
+         
+}
+ 
+ 
+.btn {
+    margin-right: 50px;
+     width: 200px;
+     height: 80px;  
+     
+    
+}
+.styleAboutUsSections{
+    background-color:#2980B9;
+    padding:20px;
+    margin: 20px;
+    color: white;
+    border-radius: 20px;
+  }
+ 
