@@ -48,7 +48,7 @@ function displayLevel () {
     <tr>
     <td class="title">${levels[i]._id}</td>
     <td class="title">${levels[i].levelName}</td>
-    <td class="title">${levels[i].createdBy.fristName} ${levels[i].createdBy.lastName} </td>
+   
    
     <td><button class="btn btn-danger" onclick="deleteLevel(${i})">Delete</button></td>
     <td><button class="btn btn-primary" onclick="editLevel(${i})">Edit</button></td>
