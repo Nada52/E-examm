@@ -6,7 +6,8 @@ var addProf = document.getElementById('addBtn');
 var searchProf = document.getElementById('searchInput');
 var professors = [];
 var professorId = "";
-var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjhkMTNhMzBiMTY1Yzc3OWM0MDVmNDQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTM0MTI3ODF9.axJjVE4jeZt-xYI3YVN6Prf994YCdQngzZ21sqBFX7Q"
+// var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjhkMTNhMzBiMTY1Yzc3OWM0MDVmNDQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTM0MTI3ODF9.axJjVE4jeZt-xYI3YVN6Prf994YCdQngzZ21sqBFX7Q"
+var Token = localStorage.getItem('token');
 addProf.onclick = function addProf(){
     fetch("https://app-e-exam.herokuapp.com/addProfessor", {
     method: "POST",
@@ -19,7 +20,7 @@ addProf.onclick = function addProf(){
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
-      Authorization: "Bearer " + token,
+      Authorization: "Bearer " + Token,
     },
   })
     .then((res) => res.json())
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded",function getProfessors(){
         mode: "cors",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + Token,
         },
       })
         .then((res) => res.json())
@@ -86,7 +87,7 @@ function deleteProfessor(i){
         mode: "cors",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + Token,
         }
       })
         .then((res) => res.json())

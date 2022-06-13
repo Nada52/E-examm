@@ -25,7 +25,10 @@ body{
      
 }
 
-
+#makeWhiteColor{
+    color: white;
+    text-decoration: none;
+}
 .signin-signup{  
 position:  absolute;
 top: 0;

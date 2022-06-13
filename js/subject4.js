@@ -7,8 +7,9 @@ var teacherInput = document.getElementById("teacher");
 var subjectId = "";
 
 var Subjects = [];
-let token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjhkMTNhMzBiMTY1Yzc3OWM0MDVmNDQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTM0MTI3ODF9.axJjVE4jeZt-xYI3YVN6Prf994YCdQngzZ21sqBFX7Q";
+// let token =
+//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjhkMTNhMzBiMTY1Yzc3OWM0MDVmNDQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTM0MTI3ODF9.axJjVE4jeZt-xYI3YVN6Prf994YCdQngzZ21sqBFX7Q";
+var Token = localStorage.getItem('token');
   getSubject();
 addbtn.onclick = function () {
   if (addbtn.innerHTML == "Add Subject") {
@@ -35,7 +36,7 @@ function addSubject() {
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
-      Authorization: "Bearer " + token,
+      Authorization: "Bearer " + Token,
     },
   })
     .then((res) => res.json())
@@ -52,15 +53,11 @@ function addSubject() {
 }
 
 
-// get from Api
-
-
-
 function getSubject() {
   var httprequest = new XMLHttpRequest();
   httprequest.open("GET", `https://app-e-exam.herokuapp.com/subjects`, true);
   httprequest.setRequestHeader("Content-Type", "application/json");
-  httprequest.setRequestHeader("Authorization", "Bearer " + token);
+  httprequest.setRequestHeader("Authorization", "Bearer " + Token);
   httprequest.send();
   httprequest.addEventListener("readystatechange", function () {
     if (httprequest.readyState == 4 && httprequest.status == 200) {
@@ -95,7 +92,7 @@ function deleteSubject(index) {
     true
   );
   httprequest.setRequestHeader("Content-Type", "application/json");
-  httprequest.setRequestHeader("Authorization", "Bearer " + token);
+  httprequest.setRequestHeader("Authorization", "Bearer " + Token);
   httprequest.send();
   httprequest.addEventListener("readystatechange", function () {
     if (httprequest.readyState == 4 && httprequest.status == 200) {
@@ -158,7 +155,7 @@ function updateSubject(subjectId) {
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
-      Authorization: "Bearer " + token,
+      Authorization: "Bearer " + Token,
     },
   })
     .then((res) => res.json())
